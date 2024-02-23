@@ -1,0 +1,13 @@
+// Baseado no bootstrap
+
+$min: 0px;
+$xs_max: 576px;
+$sm_max: 736px;
+$md_max: 992px;
+$lg_max: 1200px;
+
+$xs: "(min-width: #{$min}) and (max-width: #{$xs_max})";
+$sm: "(min-width: #{$xs_max}) and (max-width: #{$sm_max})";
+$md: "(min-width: #{$sm_max}) and (max-width: #{$md_max})";
+$lg: "(min-width: #{$md_max}) and (max-width: #{$lg_max})";
+$xl: "(min-width: #{$lg_max})";

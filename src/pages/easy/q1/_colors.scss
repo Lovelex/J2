@@ -1,0 +1,18 @@
+$brandy-red: #854632;
+$dark-charcoal: #312E2C;
+$dark-raspberry: #7A284E;
+$eggshell: #F3E5D7;
+$snow: #FFF7FB;
+$wenge-brown: #5F564D;
+$white: #FFFFFF;
+$white-coffee: #E3DDD7;
+
+#easy-q1 {
+  .color--wenge-brown {
+    color: $wenge-brown;
+  }
+
+  .color--brandy-red {
+    color: $brandy-red;
+  }
+}

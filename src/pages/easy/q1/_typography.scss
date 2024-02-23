@@ -1,0 +1,17 @@
+@import '@/spacing.scss';
+
+#easy-q1 {
+  @font-face {
+    font-family: outfit;
+    src: url('@/assets/easy/q1/fonts/outfit/Outfit-VariableFont_wght.ttf');
+  }
+
+  @font-face {
+    font-family: young-serif;
+    src: url('@/assets/easy/q1/fonts/young-serif/YoungSerif-Regular.ttf');
+  }
+
+  font-family: outfit;
+  font-size: 16px;
+}
+

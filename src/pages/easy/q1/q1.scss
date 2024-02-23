@@ -1,0 +1,120 @@
+@import './colors.scss';
+@import './typography.scss';
+@import '@/breakpoints.scss';
+@import '@/spacing.scss';
+@import '@/helpers.scss';
+
+#easy-q1 {
+  @extend .p-4;
+  background-color: $eggshell;
+
+  @media #{$xs} {
+    padding: 0px;
+    background-color: $white;
+  }
+
+  .container {
+    @extend .br-6;
+
+    max-width: 736px;
+    margin: 0 auto;
+    background: $white;
+
+    @media #{$xs} {
+      border-radius: 0;
+    }
+
+    .img-wrapper {
+      @extend .pt-10;
+      @extend .px-10;
+
+      @media #{$xs} {
+        padding: 0px;
+      }
+    }
+
+    .img-wrapper__img {
+      @extend .br-3;
+      width: 100%;
+
+      @media #{$xs} {
+        border-radius: 0;
+      }
+    }
+
+    .content {
+      @extend .p-10;
+
+      @media #{$xs} {
+        padding: map-get($spaces , "base-8" );
+      }
+    }
+
+    .card {
+      background-color: $snow;
+    }
+
+    .item {
+      list-style-type: none;
+      margin: 0;
+    }
+
+    .item::before {
+      @extend .mr-4;
+      color: $brandy-red;
+      font-weight: bold;
+    }
+
+    .item__ul {
+      &::before {
+        content: "•";
+      }
+    }
+
+    .item__ol {
+      counter-increment: item;
+
+      &::before {
+        content: counter(item);
+      }
+    }
+
+    .title {
+      font-size: 2.5rem;
+      color: $dark-charcoal;
+      font-family: young-serif;
+    }
+
+    .subtitle {
+      font-size: 1.75rem;
+    }
+
+    .card__title {
+      font-size: 1.25rem;
+      color: $dark-raspberry;
+    }
+
+    .separator {
+      height: 1px;
+      border: none;
+      background-color: $white-coffee
+    }
+
+    .table {
+      border-collapse: collapse;
+    }
+
+    .tr {
+      border-bottom: solid 1px $white-coffee;
+
+      &:last-child {
+        border-bottom: none;
+
+        // TD's do último TR
+        .td {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}

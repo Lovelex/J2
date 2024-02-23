@@ -1,0 +1,44 @@
+$max: 10;
+
+$spaces: ();
+
+@for $i from 0 through $max {
+  $multiplier: #{$i * 4}px;
+
+  // Cria um map com chaves e valores dinâmicas
+  // Ex: base-1: 4px, base-2: 8px, base-3: 12px ...
+  $key: 'base-#{$i}';
+  $spaces: map-merge($spaces, ($key: $multiplier));
+
+  // Margins
+  .mb-#{$i} { margin-bottom: $multiplier; }
+  .ml-#{$i} { margin-left: $multiplier; }
+  .mr-#{$i} { margin-right: $multiplier; }
+  .my-#{$i} { margin: $multiplier 0; }
+  .mx-#{$i} { margin: 0 $multiplier; }
+  .mt-#{$i} { margin-top: $multiplier; }
+  .mt-auto { margin-top: auto; }
+  .mr-auto { margin-right: auto; }
+  .mb-auto { margin-bottom: auto; }
+  .ml-auto { margin-left: auto; }
+
+  // Paddings
+  .p-#{$i} { padding: $multiplier; }
+  .pb-#{$i} { padding-bottom: $multiplier; }
+  .pl-#{$i} { padding-left: $multiplier; }
+  .pr-#{$i} { padding-right: $multiplier; }
+  .py-#{$i} { padding: $multiplier 0; }
+  .px-#{$i} { padding: 0 $multiplier; }
+  .pt-#{$i} { padding-top: $multiplier; }
+  .pt-auto { padding-top: auto; }
+  .pr-auto { padding-right: auto; }
+  .pb-auto { padding-bottom: auto; }
+  .pl-auto { padding-left: auto; }
+
+
+  // Gap
+  .gap-#{$i} { gap: $multiplier; }
+
+  // Border
+  .br-#{$i} { border-radius: $multiplier; }
+}
