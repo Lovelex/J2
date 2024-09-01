@@ -1,5 +1,9 @@
 // Baseado no bootstrap
 
+.d-block {
+  display: block;
+}
+
 .d-flex {
   display: flex;
 }
@@ -8,10 +12,34 @@
   flex-direction: column;
 }
 
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
 .fw-bold {
   font-weight: bold;
 }
 
 .w-100 {
   width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.no-underline {
+  text-decoration-line: none;
+}
+
+.fw-bold {
+  font-weight: 500;
 }
