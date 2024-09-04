@@ -1,8 +1,12 @@
-import { Avatar, Button, Container, Grid2 } from '@mui/material'
+import { Avatar, Box, Container, Grid2} from '@mui/material'
+import MainHeading from '@/components/easy/q3/MainHeading'
+import SubHeading from '@/components/easy/q3/SubHeading';
+import Paragraph from '@/components/easy/q3/Paragraph';
+import Button from '@/components/easy/q3/Button';
+
 import logoDark from '@/assets/easy/q3/images/logo-dark.svg'
 import logoLight from '@/assets/easy/q3/images/logo-light.svg'
 import heroDesktop from '@/assets/easy/q3/images/image-hero-desktop.png'
-
 import animation from '@/assets/easy/q3/images/icon-animation.svg'
 import design from '@/assets/easy/q3/images/icon-design.svg'
 import photography from '@/assets/easy/q3/images/icon-photography.svg'
@@ -10,7 +14,6 @@ import crypto from '@/assets/easy/q3/images/icon-crypto.svg'
 import business from '@/assets/easy/q3/images/icon-business.svg'
 
 import './q3.scss'
-import './_colors.scss'
 import './_typography.scss'
 
 const ITEMS = [
@@ -46,34 +49,35 @@ const ITEMS = [
 ]
 
 function Q3() {
+
   return (
     <Container id='easy-q3'>
-      <nav>
+      <Box className="nav d-flex justify-content-between" sx={{ my: 6 }}>
         <img src={logoDark} />
 
         <Button>
           Get Started
         </Button>
+      </Box>
 
-      </nav>
-
-      <header>
-        <div>
-          <span>
+      <Grid2 className='hero' container>
+        <Grid2 size={6}>
+          <MainHeading>
             Maximize skill,minimize budget
-          </span>
-          <span>
+          </MainHeading>
+          <Paragraph>
             Our modern courses across a range of in-demand skills will give you the knowledge you
             need to live the life you want.
-          </span>
+          </Paragraph>
           <Button>
             Get Started
           </Button>
-        </div>
-        <div>
-          <img src={heroDesktop} />
-        </div>
-      </header>
+        </Grid2>
+        <Grid2 size={6}>
+          <img className='hero--img' src={heroDesktop} />
+        </Grid2>
+      </Grid2>
+
 
       <main>
         <Grid2 container spacing={2}>
@@ -84,8 +88,8 @@ function Q3() {
             ITEMS.map(({ icon, title, paragraph }) => (
               <Grid2 key={title} size={4}>
                 <Avatar src={icon} />
-                <h3>{title}</h3>
-                <p>{paragraph}</p>
+                <SubHeading>{title}</SubHeading>
+                <Paragraph>{paragraph}</Paragraph>
                 <Button>
                   Get Started
                 </Button>

@@ -1,3 +1,14 @@
 #easy-q3 {
   height: 100vh;
+
+  .hero {
+    height: 600px;
+  }
+
+  .hero--img {
+    z-index: -1;
+    position: absolute;
+    top: -200px;
+    right: -400px;
+  }
 }
