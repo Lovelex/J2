@@ -1,10 +1,18 @@
 import { Box } from "@mui/material";
 import Button from "@/components/easy/q3/Button";
+
 import logoDark from '@/assets/easy/q3/images/logo-dark.svg'
 
 function Nav() {
+  const style = {
+    mt: 6,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  }
+
   return (
-    <Box className="nav d-flex align-items-center justify-content-between" sx={{ my: 6 }}>
+    <Box className="nav " sx={style}>
       <img src={logoDark} />
 
       <Button bgColor='primary'>

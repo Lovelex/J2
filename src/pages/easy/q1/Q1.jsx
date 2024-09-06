@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { MAIN } from "@/routes.js"
+import { HOME } from "@/routes.js"
 import img from '@/assets/easy/q1/images/image-omelette.jpeg'
 
 import Card from "@/components/easy/q1/Card"
@@ -14,7 +14,7 @@ function Q1() {
     <div id="easy-q1">
       <div className="container">
         <div className="img-wrapper">
-          <Link to={MAIN}>
+          <Link to={HOME}>
             <img className="img-wrapper__img" src={img} />
           </Link>
         </div>

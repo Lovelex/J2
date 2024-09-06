@@ -1,3 +1,4 @@
+import { Box, Card, Grid2 } from '@mui/material'
 import CourseCard from '@/components/easy/q3/CourseCard'
 
 import animation from '@/assets/easy/q3/images/icon-animation.svg'
@@ -5,7 +6,7 @@ import design from '@/assets/easy/q3/images/icon-design.svg'
 import photography from '@/assets/easy/q3/images/icon-photography.svg'
 import crypto from '@/assets/easy/q3/images/icon-crypto.svg'
 import business from '@/assets/easy/q3/images/icon-business.svg'
-import { Box, Grid2 } from '@mui/material'
+import { useTheme } from '@emotion/react'
 
 const ITEMS = [
   {
@@ -40,16 +41,26 @@ const ITEMS = [
 ]
 
 function Courses() {
+  const theme = useTheme()
 
   return (
-    <Box sx={{ mb: 20 }}>
+    <Box sx={{ mb: 20, py: 16 }}>
       <Grid2 container spacing={2}>
-        <Grid2 size={4}>
+        <Grid2
+          color={theme.palette.q3.white.main}
+          sx={{ borderRadius: 4, px: 8, pt: 16, background: theme.palette.q3.gradient.main }}
+          size={4}
+        >
           Check out our most popular courses!
         </Grid2>
         {
           ITEMS.map(({ icon, title, paragraph }) => (
-            <Grid2 key={title} size={4}>
+            <Grid2
+              sx={{ position: 'relative', p: 4, my: 2 , overflow: 'visible', borderRadius: 4 }}
+              component={Card}
+              key={title}
+              size={4}
+            >
               <CourseCard
                 key={title}
                 icon={icon}

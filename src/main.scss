@@ -1,2 +1,6 @@
 @use './spacing.scss';
 @use './reset.scss';
+
+#root {
+  overflow-x: hidden;
+}

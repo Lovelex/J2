@@ -3,17 +3,17 @@ import {
   createBrowserRouter
 } from 'react-router-dom'
 
-import { EASY_Q1, EASY_Q2, EASY_Q3, MAIN } from './routes.js'
+import { EASY_Q1, EASY_Q2, EASY_Q3, HOME } from './routes.js'
 
-import App from './App.jsx'
+import Home from './pages/Home.jsx'
 import Q1 from './pages/easy/q1/Q1.jsx'
 import Q2 from './pages/easy/q2/Q2.jsx'
 import Q3 from './pages/easy/q3/Q3.jsx'
 
 const router = createBrowserRouter([
   {
-    path: MAIN,
-    element: <App />
+    path: HOME,
+    element: <Home />
   },
   {
     path: EASY_Q1,

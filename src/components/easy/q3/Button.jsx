@@ -16,7 +16,7 @@ const MOBILE_HEIGHT = HEIGHT - (HEIGHT * 0.2)
 function Button({ bgColor }) {
   const theme = useTheme()
 
-  let styles = {
+  let style = {
     color: theme.palette.q3.white.main,
     background: theme.palette.q3[bgColor].main,
     height: { lg: `${HEIGHT}px`, xs: `${MOBILE_HEIGHT}px` },
@@ -34,7 +34,7 @@ function Button({ bgColor }) {
   }
 
   return (
-    <ButtonBase sx={styles}>
+    <ButtonBase sx={style}>
       Get Started
     </ButtonBase>
   )

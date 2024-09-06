@@ -16,11 +16,11 @@ export default ({
     main: '#FFF',
     hover: '#FFFFFF80',
   },
-  btnGradient: {
-    main: 'linear-gradient(0deg, #FE6B8B 30%, #FF8E53 90%)',
-    hover: 'linear-gradient(0deg, #FE6B8B80 30%, #FF8E5380 90%)'
+  gradient: {
+    main: 'linear-gradient(0deg, #FE6B8B 0%, #FF8E53 100%)',
+    hover: 'linear-gradient(0deg, #FE6B8B80 0%, #FF8E5380 100%)'
   },
-  btnGradientFooter: {
+  gradientFooter: {
     main: 'linear-gradient(0deg, #F02AA6, #4851FF)',
   }
 })

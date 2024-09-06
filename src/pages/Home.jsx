@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { EASY_Q1, EASY_Q2, EASY_Q3 } from './routes'
+import { EASY_Q1, EASY_Q2, EASY_Q3 } from '../routes'
 
 const routes = [
   {path: EASY_Q1, name: 'Q1'},
@@ -7,7 +7,7 @@ const routes = [
   {path: EASY_Q3, name: 'Q3'},
 ]
 
-function App() {
+function Home() {
   return (
     <>
       <ul>
@@ -23,4 +23,4 @@ function App() {
   )
 }
 
-export default App
+export default Home

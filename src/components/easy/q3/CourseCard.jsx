@@ -1,4 +1,4 @@
-import { Avatar, Box, Card } from "@mui/material";
+import { Avatar, Box } from "@mui/material";
 import PropTypes from "prop-types";
 
 import Paragraph from '@/components/easy/q3/Paragraph';
@@ -14,7 +14,7 @@ const propTypes = {
 
 function Couses({ title, icon, paragraph }) {
   return (
-    <Box sx={{ position: 'relative',height: '100%', p: 4, my: 2, border: '1px solid #E2E8F0' }}>
+    <>
       <Avatar src={icon}
         sx={{ position: 'absolute', top: '-20px', left: '0' }}
       />
@@ -23,8 +23,7 @@ function Couses({ title, icon, paragraph }) {
       <ButtonLink>
         Get Started
       </ButtonLink>
-    </Box>
-
+    </>
   )
 }
 
