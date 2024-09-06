@@ -1,10 +1,9 @@
-import { Avatar, Box } from "@mui/material";
+import { Avatar } from "@mui/material";
 import PropTypes from "prop-types";
 
 import Paragraph from '@/components/easy/q3/Paragraph';
 import SubHeading from '@/components/easy/q3/SubHeading';
 import ButtonLink from '@/components/easy/q3/ButtonLink';
-
 
 const propTypes = {
   title: PropTypes.string,

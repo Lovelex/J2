@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import { Typography, useTheme } from "@mui/material";
+import { useTheme } from "@mui/material";
+import BaseTypography from '@/components/easy/q3/BaseTypography';
 
 const propTypes = {
   children: PropTypes.node,
@@ -9,12 +10,15 @@ const propTypes = {
 function SubHeading({ children, sx }) {
   const theme = useTheme();
 
-  const style = { ...sx, color: theme.palette.q3.secondary .main }
-
   return (
-    <Typography fontWeight={'bold'} variant='h2' sx={style}>
+    <BaseTypography
+      color={theme.palette.q3.secondary.main}
+      fontWeight={'bold'}
+      variant='h2'
+      sx={{ ...sx }}
+    >
       { children }
-    </Typography>
+    </BaseTypography>
   )
 }
 

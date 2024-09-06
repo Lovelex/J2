@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import { Typography, useTheme } from "@mui/material";
+import BaseTypography from '@/components/easy/q3/BaseTypography';
+import { useTheme } from '@emotion/react';
 
 const propTypes = {
   children: PropTypes.node,
@@ -9,12 +10,15 @@ const propTypes = {
 function MainHeading({ children, sx }) {
   const theme = useTheme();
 
-  const style = { ...sx, color: theme.palette.q3.primary.main }
-
   return (
-    <Typography fontWeight={'bold'} variant='h1' sx={style}>
+    <BaseTypography
+      color={theme.palette.q3.primary.main}
+      fontWeight='bold'
+      variant='h1'
+      sx={{ ...sx }}
+    >
       { children }
-    </Typography>
+    </BaseTypography>
   )
 }
 
