@@ -22,5 +22,8 @@ export default ({
   },
   gradientFooter: {
     main: 'linear-gradient(0deg, #F02AA6, #4851FF)',
+  },
+  background: {
+    main: 'linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%)'
   }
 })

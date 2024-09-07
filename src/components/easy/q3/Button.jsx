@@ -1,8 +1,9 @@
-import { ButtonBase, useTheme } from "@mui/material";
 import PropTypes from "prop-types";
+import { useTheme } from "@mui/material";
+import BaseButton from "@/components/easy/q3/BaseButton";
 
 const propTypes = {
-  bgColor: PropTypes.oneOf(['main', 'btnGradient', 'btnGradientFooter']),
+  bgColor: PropTypes.string,
   link: PropTypes.bool
 }
 
@@ -18,7 +19,7 @@ function Button({ bgColor }) {
 
   let style = {
     color: theme.palette.q3.white.main,
-    background: theme.palette.q3[bgColor].main,
+    background: bgColor,
     height: { lg: `${HEIGHT}px`, xs: `${MOBILE_HEIGHT}px` },
     borderRadius: `${HEIGHT}px`,
     py: 4,
@@ -34,9 +35,9 @@ function Button({ bgColor }) {
   }
 
   return (
-    <ButtonBase sx={style}>
+    <BaseButton sx={style}>
       Get Started
-    </ButtonBase>
+    </BaseButton>
   )
 }
 

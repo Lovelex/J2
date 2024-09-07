@@ -1,9 +1,16 @@
-import { ButtonBase, useTheme } from "@mui/material";
+import { useTheme } from "@mui/material";
+import PropTypes from 'prop-types'
+import BaseButton from "@/components/easy/q3/BaseButton";
 
-function ButtonLink() {
+const propTypes = {
+  sx: PropTypes.object
+}
+
+function ButtonLink({ sx }) {
   const theme = useTheme()
 
   let style = {
+    ...sx,
     color: theme.palette.q3.pink.main,
     '&:hover': {
       color: theme.palette.q3.pink.hover,
@@ -11,10 +18,12 @@ function ButtonLink() {
   }
 
   return (
-    <ButtonBase sx={style}>
+    <BaseButton sx={style}>
       Get Started
-    </ButtonBase>
+    </BaseButton>
   )
 }
+
+ButtonLink.propTypes = propTypes
 
 export default ButtonLink;

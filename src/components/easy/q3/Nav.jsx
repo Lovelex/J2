@@ -1,9 +1,11 @@
-import { Box } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 import Button from "@/components/easy/q3/Button";
 
 import logoDark from '@/assets/easy/q3/images/logo-dark.svg'
 
 function Nav() {
+  const theme = useTheme()
+
   const style = {
     mt: 6,
     display: 'flex',
@@ -15,7 +17,7 @@ function Nav() {
     <Box className="nav " sx={style}>
       <img src={logoDark} />
 
-      <Button bgColor='primary'>
+      <Button bgColor={theme.palette.q3.primary.main}>
         Get Started
       </Button>
     </Box>

@@ -1,12 +1,13 @@
-import { Box, Card, Grid2 } from '@mui/material'
+import { Box, Container, Grid2 } from '@mui/material'
 import CourseCard from '@/components/easy/q3/CourseCard'
+import { useTheme } from '@emotion/react'
+import SubHeading from '@/components/easy/q3/SubHeading'
 
 import animation from '@/assets/easy/q3/images/icon-animation.svg'
 import design from '@/assets/easy/q3/images/icon-design.svg'
 import photography from '@/assets/easy/q3/images/icon-photography.svg'
 import crypto from '@/assets/easy/q3/images/icon-crypto.svg'
 import business from '@/assets/easy/q3/images/icon-business.svg'
-import { useTheme } from '@emotion/react'
 
 const ITEMS = [
   {
@@ -40,37 +41,45 @@ const ITEMS = [
   },
 ]
 
+const size = {
+  xs: 12,
+  sm: 6,
+  lg: 4,
+}
+
 function Courses() {
   const theme = useTheme()
 
   return (
-    <Box sx={{ mb: 20, py: 16 }}>
-      <Grid2 container spacing={2}>
-        <Grid2
-          color={theme.palette.q3.white.main}
-          sx={{ borderRadius: 4, px: 8, pt: 16, background: theme.palette.q3.gradient.main }}
-          size={4}
-        >
-          Check out our most popular courses!
-        </Grid2>
-        {
-          ITEMS.map(({ icon, title, paragraph }) => (
-            <Grid2
-              sx={{ position: 'relative', p: 4, my: 2 , overflow: 'visible', borderRadius: 4 }}
-              component={Card}
-              key={title}
-              size={4}
-            >
+    <Box sx={{ py: 16, background: theme.palette.q3.background.main }}>
+      <Container>
+        <Grid2 container rowSpacing={19} columnSpacing={8}>
+          <Grid2
+            sx={{
+              borderRadius: 4,
+              px: 8,
+              py: 16,
+              background: theme.palette.q3.gradient.main
+            }}
+            size={size}
+          >
+            <SubHeading>
+              Check out our most popular courses!
+            </SubHeading>
+          </Grid2>
+          {
+            ITEMS.map(({ icon, title, paragraph }) => (
               <CourseCard
                 key={title}
                 icon={icon}
                 title={title}
                 paragraph={paragraph}
+                size={size}
               />
-            </Grid2>
-          ))
-        }
-      </Grid2>
+            ))
+          }
+        </Grid2>
+      </Container>
     </Box>
   )
 }

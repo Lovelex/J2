@@ -1,19 +1,18 @@
 import PropTypes from 'prop-types';
-import { useTheme } from "@mui/material";
 import BaseTypography from '@/components/easy/q3/BaseTypography';
 
 const propTypes = {
   children: PropTypes.node,
-  sx: PropTypes.object
+  sx: PropTypes.object,
+  color: PropTypes.string
 }
 
-function Paragraph({ children, sx }) {
-  const theme = useTheme();
-
+function SubHeading3({ children, sx, color }) {
   return (
     <BaseTypography
-      color={theme.palette.q3.grey.main}
-      variant='body1'
+      color={color}
+      fontWeight='bold'
+      variant='h4'
       sx={{ ...sx, fontSize: '1.125rem' }}
     >
       { children }
@@ -21,6 +20,6 @@ function Paragraph({ children, sx }) {
   )
 }
 
-Paragraph.propTypes = propTypes
+SubHeading3.propTypes = propTypes
 
-export default Paragraph;
+export default SubHeading3;

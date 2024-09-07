@@ -12,10 +12,10 @@ function SubHeading({ children, sx }) {
 
   return (
     <BaseTypography
-      color={theme.palette.q3.secondary.main}
-      fontWeight={'bold'}
+      color={theme.palette.q3.white.main}
+      fontWeight='bold'
       variant='h2'
-      sx={{ ...sx }}
+      sx={{ ...sx, fontSize: '2rem' }}
     >
       { children }
     </BaseTypography>

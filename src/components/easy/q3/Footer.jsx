@@ -9,7 +9,6 @@ function Footer() {
 
   const boxStyle = {
     backgroundColor: theme.palette.q3.primary.main,
-    mt: 6,
     p: 4
   }
 
@@ -23,7 +22,7 @@ function Footer() {
     <Box sx={boxStyle}>
       <Container style={containerStyle}>
         <img src={logoLight} />
-        <Button bgColor='gradientFooter'>Get Started</Button>
+        <Button bgColor={theme.palette.q3.gradientFooter.main}>Get Started</Button>
       </Container>
     </Box>
   )
