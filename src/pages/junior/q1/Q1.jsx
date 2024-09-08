@@ -1,5 +1,5 @@
-import { AccountCircle } from "@mui/icons-material"
-import { Button, Container, InputAdornment, TextField } from "@mui/material"
+import { Button, Container } from "@mui/material"
+import SearchBar from "@/components/junior/q1/SearchBar"
 
 const infos = [
   {
@@ -46,34 +46,20 @@ function Q1() {
         </Button>
       </div>
 
-      <div>
-        <TextField
-          id="input-with-icon-textfield"
-          label="TextField"
-          slotProps={{
-            input: {
-              startAdornment: (
-                <InputAdornment position="start">
-                  <AccountCircle />
-                </InputAdornment>
-              ),
-            },
-          }}
-          variant="standard"
-        />
-        <Button>Search</Button>
-      </div>
+      <SearchBar  />
 
       <div>
-        <img />
+        <div>
+          <img />
 
-        <h1>The Octocat </h1>
+          <h1>The Octocat </h1>
 
-        <span>Joined 25 Jan 2011</span>
+          <span>Joined 25 Jan 2011</span>
 
-        <a href="#">@octocat</a>
+          <a href="#">@octocat</a>
 
-        <p>This profile has no bio</p>
+          {<p>This profile has no bio</p>}
+        </div>
 
         <div>
           {
