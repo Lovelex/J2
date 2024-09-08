@@ -12,7 +12,7 @@ function Paragraph({ children, sx }) {
 
   return (
     <BaseTypography
-      color={theme.palette.q3.grey.main}
+      color={theme.palette.easy.q3.grey.main}
       variant='body1'
       sx={{ ...sx, fontSize: '1.125rem' }}
     >

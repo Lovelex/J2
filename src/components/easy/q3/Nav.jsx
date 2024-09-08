@@ -17,7 +17,7 @@ function Nav() {
     <Box className="nav " sx={style}>
       <img src={logoDark} />
 
-      <Button bgColor={theme.palette.q3.primary.main}>
+      <Button bgColor={theme.palette.easy.q3.primary.main}>
         Get Started
       </Button>
     </Box>

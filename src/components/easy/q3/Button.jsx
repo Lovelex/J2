@@ -18,7 +18,7 @@ function Button({ bgColor }) {
   const theme = useTheme()
 
   let style = {
-    color: theme.palette.q3.white.main,
+    color: theme.palette.easy.q3.white.main,
     background: bgColor,
     height: { lg: `${HEIGHT}px`, xs: `${MOBILE_HEIGHT}px` },
     borderRadius: `${HEIGHT}px`,
@@ -30,7 +30,7 @@ function Button({ bgColor }) {
       width: '100%',
       borderRadius: `${HEIGHT}px`,
       height: { lg: `${HEIGHT}px`, xs: `${MOBILE_HEIGHT}px` },
-      backgroundColor: theme.palette.q3.white.hover,
+      backgroundColor: theme.palette.easy.q3.white.hover,
     }
   }
 

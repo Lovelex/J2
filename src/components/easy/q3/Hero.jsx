@@ -26,7 +26,7 @@ function Hero() {
           Our modern courses across a range of in-demand skills will give you the knowledge you
           need to live the life you want.
         </Paragraph>
-        <Button bgColor={theme.palette.q3.gradient.main}>
+        <Button bgColor={theme.palette.easy.q3.gradient.main}>
           Get Started
         </Button>
       </Grid2>

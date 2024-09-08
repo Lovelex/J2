@@ -11,9 +11,9 @@ function ButtonLink({ sx }) {
 
   let style = {
     ...sx,
-    color: theme.palette.q3.pink.main,
+    color: theme.palette.easy.q3.pink.main,
     '&:hover': {
-      color: theme.palette.q3.pink.hover,
+      color: theme.palette.easy.q3.pink.hover,
     }
   }
 

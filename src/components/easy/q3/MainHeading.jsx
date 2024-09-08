@@ -12,7 +12,7 @@ function MainHeading({ children, sx }) {
 
   return (
     <BaseTypography
-      color={theme.palette.q3.primary.main}
+      color={theme.palette.easy.q3.primary.main}
       fontWeight='bold'
       variant='h1'
       sx={{ ...sx, fontSize: '3.5rem' }}

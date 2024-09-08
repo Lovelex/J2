@@ -51,7 +51,7 @@ function Courses() {
   const theme = useTheme()
 
   return (
-    <Box sx={{ py: 16, background: theme.palette.q3.background.main }}>
+    <Box sx={{ py: 16, background: theme.palette.easy.q3.background.main }}>
       <Container>
         <Grid2 container rowSpacing={19} columnSpacing={8}>
           <Grid2
@@ -59,7 +59,7 @@ function Courses() {
               borderRadius: 4,
               px: 8,
               py: 16,
-              background: theme.palette.q3.gradient.main
+              background: theme.palette.easy.q3.gradient.main
             }}
             size={size}
           >

@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
-import { EASY_Q1, EASY_Q2, EASY_Q3 } from '../routes'
+import { EASY_Q1, EASY_Q2, EASY_Q3, JUNIOR_Q1 } from '@/routes'
 
 const routes = [
   {path: EASY_Q1, name: 'Q1'},
   {path: EASY_Q2, name: 'Q2'},
   {path: EASY_Q3, name: 'Q3'},
+  {path: JUNIOR_Q1, name: 'Q1'},
 ]
 
 function Home() {

@@ -3,12 +3,21 @@ import {
   createBrowserRouter
 } from 'react-router-dom'
 
-import { EASY_Q1, EASY_Q2, EASY_Q3, HOME } from './routes.js'
+import {
+  EASY_Q1,
+  EASY_Q2,
+  EASY_Q3,
+  JUNIOR_Q1,
+  HOME
+} from '@/routes.js'
 
-import Home from './pages/Home.jsx'
-import Q1 from './pages/easy/q1/Q1.jsx'
-import Q2 from './pages/easy/q2/Q2.jsx'
-import Q3 from './pages/easy/q3/Q3.jsx'
+import Home from '@/pages/Home.jsx'
+
+import EasyQ1 from '@/pages/easy/q1/Q1.jsx'
+import EasyQ2 from '@/pages/easy/q2/Q2.jsx'
+import EasyQ3 from '@/pages/easy/q3/Q3.jsx'
+
+import JuniorQ1 from '@/pages/junior/q1/Q1.jsx'
 
 const router = createBrowserRouter([
   {
@@ -17,15 +26,19 @@ const router = createBrowserRouter([
   },
   {
     path: EASY_Q1,
-    element: <Q1 />
+    element: <EasyQ1 />
   },
   {
     path: EASY_Q2,
-    element: <Q2 />
+    element: <EasyQ2 />
   },
   {
     path: EASY_Q3,
-    element: <Q3 />
+    element: <EasyQ3 />
+  },
+  {
+    path: JUNIOR_Q1,
+    element: <JuniorQ1 />
   },
 ])
 
