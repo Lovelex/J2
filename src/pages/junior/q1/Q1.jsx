@@ -1,91 +1,36 @@
-import { Button, Container } from "@mui/material"
+import { useState } from "react"
+import { Box, Container } from "@mui/material"
 import SearchBar from "@/components/junior/q1/SearchBar"
-
-const infos = [
-  {
-    label: 'Repos',
-    value: '8'
-  },
-  {
-    label: 'Followers',
-    value: '3938'
-  },
-  {
-    label: 'Following',
-    value: '9'
-  },
-]
-
-const socialMedias = [
-  {
-    icon: '',
-    value: 'San Francisco'
-  },
-  {
-    icon: '',
-    value: null
-  },
-  {
-    icon: '',
-    value: 'https://github.blog'
-  },
-  {
-    icon: '',
-    value: '@github'
-  },
-]
+import Card from "@/components/junior/q1/Card"
+import Bio from "@/components/junior/q1/Bio"
+import Infos from "@/components/junior/q1/Infos"
+import SocialMedias from "@/components/junior/q1/SocialMedias"
+import { useTheme } from "@emotion/react"
+import DarkMode from "@/components/junior/q1/DarkMode"
 
 function Q1() {
+  const [data, setData] = useState({})
+  const theme = useTheme()
+
   return (
-    <Container>
-      <div>
-        <img src="https://placehold.co/128x40/EEE/31343C" />
-        <Button>
-          Dark
-          {/* Ícone de lua */}
-        </Button>
-      </div>
+    <Box sx={{ backgroundColor: theme.palette.junior.q1.bg.primary.main, minHeight: '100vh' }}>
+      <Container>
+        <DarkMode />
 
-      <SearchBar  />
+        <SearchBar setData={setData} data={data} />
 
-      <div>
-        <div>
-          <img />
+        {
+          data?.name &&
+          <Card sx={{ mt: 8 }}>
+            <Bio data={data} />
 
-          <h1>The Octocat </h1>
+            <Infos data={data} />
 
-          <span>Joined 25 Jan 2011</span>
-
-          <a href="#">@octocat</a>
-
-          {<p>This profile has no bio</p>}
-        </div>
-
-        <div>
-          {
-            infos.map(({ label, value }, index) => (
-              <div key={index}>
-                <span>{label}</span>
-
-                <span>{value}</span>
-              </div>
-            ))
-          }
-        </div>
-
-        <div>
-          {
-            socialMedias.map(({ icon, value }, index) => (
-              <a key={index} href={value}>
-                <span>
-                  {value}
-                </span>
-              </a>
-            ))
-          }
-        </div>
-      </div>
-    </Container>
+            <SocialMedias data={data} />
+          </Card>
+        }
+      </Container>
+    </Box>
   )
 }
 
