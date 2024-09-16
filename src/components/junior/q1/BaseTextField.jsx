@@ -3,21 +3,25 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   sx: PropTypes.object,
-  setSearch: PropTypes.func
+  setSearch: PropTypes.func,
+  id: PropTypes.string
 }
 
-function BaseTextField({ sx, setSearch }) {
+function BaseTextField({ sx, setSearch, id }) {
   return (
     <Box sx={sx}>
       <Box
+        id={id}
         sx={
           {
             width: '100%',
             height: '40px',
             fontSize: '18px',
             border: 'none',
+            backgroundColor: 'inherit',
             '&:focus': {
-              outline: 'none'
+              outline: 'none',
+              backgroundColor: 'inherit',
             }
           }
         }
