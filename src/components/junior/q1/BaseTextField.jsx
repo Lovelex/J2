@@ -12,6 +12,7 @@ function BaseTextField({ sx, setSearch, id }) {
     <Box sx={sx}>
       <Box
         id={id}
+        autocomplete="off"
         sx={
           {
             width: '100%',
@@ -19,6 +20,7 @@ function BaseTextField({ sx, setSearch, id }) {
             fontSize: '18px',
             border: 'none',
             backgroundColor: 'inherit',
+            color: 'inherit',
             '&:focus': {
               outline: 'none',
               backgroundColor: 'inherit',

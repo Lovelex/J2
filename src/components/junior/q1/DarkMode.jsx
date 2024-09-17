@@ -5,22 +5,24 @@ import Icon from '@/components/junior/q1/Icon'
 import { useThemeContext } from '@/contexts/ThemeContext'
 
 const propTypes = {
-  data: PropTypes.object
+  sx: PropTypes.object
 }
 
-function Bio() {
+function Bio({ sx }) {
   const { mode, toggleTheme } = useThemeContext()
   const isLightMode = mode === 'light'
-  console.log(mode)
   return (
-    <Container>
+    <Container sx={{ ...sx }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 9 }}>
         <Heading1>devfinder</Heading1>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <Button onClick={toggleTheme}>
-            Dark
+          <Button
+            onClick={toggleTheme}
+            endIcon={
+              <Icon sx={{ display: 'flex', alignItems: 'center' }} name={isLightMode ? "moon" : 'sun'} />
+            }>
+            {isLightMode ? 'Dark': 'Light'}
           </Button>
-          <Icon name={isLightMode ? "moon" : 'sun'} />
         </Box>
       </Box>
     </Container>
