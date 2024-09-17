@@ -13,7 +13,13 @@ function Q1() {
   const theme = useTheme()
 
   return (
-    <Box sx={{ backgroundColor: theme.palette.junior.q1.bg.primary.main, minHeight: '100vh' }}>
+    <Box
+      sx={{
+        backgroundColor: theme.palette.junior.q1.bg.primary.main,
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+      }}>
       <Container>
         <DarkMode />
 
@@ -21,10 +27,10 @@ function Q1() {
 
         {
           data?.name &&
-          <Card sx={{ mt: 8 }}>
-            <Bio data={data} />
+          <Card sx={{ mt: 6, p: 12 }}>
+            <Bio sx={{ mb: 8 }} data={data} />
 
-            <Infos data={data} />
+            <Infos sx={{ mb: 8 }} data={data} />
 
             <SocialMedias data={data} />
           </Card>

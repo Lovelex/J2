@@ -11,10 +11,11 @@ import { useTheme } from "@emotion/react"
 
 const propTypes = {
   setData: PropTypes.func,
-  data: PropTypes.object
+  data: PropTypes.object,
+  sx: PropTypes.object
 }
 
-function SearchBar({ setData, data }) {
+function SearchBar({ setData, data, sx }) {
   const [search, setSearch] = useState('')
 
   const submit = async (e) => {
@@ -30,8 +31,8 @@ function SearchBar({ setData, data }) {
   const theme = useTheme()
 
   return (
-    <Card>
-        <Box sx={{ display: 'flex', alignItems: 'center' }} component="form" onSubmit={submit}>
+    <Card sx={{ ...sx, p: 2 }}>
+      <Box sx={{ display: 'flex', alignItems: 'center' }} component="form" onSubmit={submit}>
         <label htmlFor="search">
           <Icon sx={{ m: 6, display: 'flex', alignItems: 'center' }} name='search' />
         </label>

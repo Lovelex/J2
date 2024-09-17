@@ -8,7 +8,7 @@ const propTypes = {
 
 function BaseButton({ sx, children }) {
   const theme = useTheme();
-  console.log(theme.palette)
+
   return (
     <ButtonBase
       type="submit"

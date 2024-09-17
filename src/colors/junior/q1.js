@@ -3,10 +3,7 @@ const light = {
     primary: {
       main: '#0079FF',
       hover: '#60ABFF'
-    },
-    secondary: {
-      main: '#4B6A9B',
-    },
+    }
   },
   base: {
     primary: {
@@ -40,10 +37,7 @@ const dark = {
     primary: {
       main: '#0079FF',
       hover: '#60ABFF'
-    },
-    secondary: {
-      main: '#4B6A9B',
-    },
+    }
   },
   base: {
     primary: {
