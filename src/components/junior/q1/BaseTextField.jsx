@@ -12,7 +12,7 @@ function BaseTextField({ sx, setSearch, id }) {
     <Box sx={sx}>
       <Box
         id={id}
-        autocomplete="off"
+        autoComplete="off"
         sx={
           {
             width: '100%',
