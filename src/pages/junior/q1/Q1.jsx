@@ -26,7 +26,7 @@ function Q1() {
         <SearchBar setData={setData} data={data} />
 
         {
-          data?.name &&
+          data?.id &&
           <Card sx={{ mt: 6, p: 12 }}>
             <Bio sx={{ mb: 8 }} data={data} />
 
