@@ -8,6 +8,7 @@ import {
   EASY_Q2,
   EASY_Q3,
   JUNIOR_Q1,
+  JUNIOR_Q2,
   HOME
 } from '@/routes.js'
 
@@ -18,6 +19,7 @@ import EasyQ2 from '@/pages/easy/q2/Q2.jsx'
 import EasyQ3 from '@/pages/easy/q3/Q3.jsx'
 
 import JuniorQ1 from '@/pages/junior/q1/Q1.jsx'
+import JuniorQ2 from '@/pages/junior/q2/Q2.jsx'
 
 const router = createBrowserRouter([
   {
@@ -39,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: JUNIOR_Q1,
     element: <JuniorQ1 />
+  },
+  {
+    path: JUNIOR_Q2,
+    element: <JuniorQ2 />
   },
 ])
 

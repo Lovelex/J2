@@ -1,8 +1,11 @@
 import { createContext, useState, useContext } from "react";
 import PropTypes from "prop-types";
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
+
 import easy_q3 from '@/colors/easy/q3.js'
+
 import junior_q1 from '@/colors/junior/q1.js'
+import junior_q2 from '@/colors/junior/q2.js'
 
 const propTypes = {
   children: PropTypes.node
@@ -24,11 +27,11 @@ export const CustomThemeProvider = ({ children }) => {
         q3: mode === 'light' ? easy_q3.light : easy_q3.dark
       },
       junior: {
-        q1: mode === 'light' ? junior_q1.light : junior_q1.dark
+        q1: mode === 'light' ? junior_q1.light : junior_q1.dark,
+        q2: mode === 'light' ? junior_q2.light : junior_q2.dark
       }
     }
   });
-
 
   return (
     <ThemeContext.Provider value={{ mode, toggleTheme }}>

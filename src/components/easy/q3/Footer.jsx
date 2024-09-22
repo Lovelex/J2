@@ -6,7 +6,6 @@ import logoLight from '@/assets/easy/q3/images/logo-light.svg'
 
 function Footer() {
   const theme = useTheme()
-  console.log(theme)
 
   const boxStyle = {
     backgroundColor: theme.palette.easy.q3.primary.main,
