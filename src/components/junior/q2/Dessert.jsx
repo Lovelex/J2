@@ -11,19 +11,22 @@ function Dessert({ data, sx }) {
 
   return (
     <>
-      <Box sx={{ ...sx, position: 'relative' }}>
+      <Box sx={{ position: 'relative', maxWidth: '250px', maxHeight: '240px' }}>
         <Image
-          sx={{ width: '100%', borderRadius: 2 }}
+          sx={{ width: '100%', borderRadius: 2, maxWidth: '250px', maxHeight: '240px' }}
           imageName={data.image.desktop}
           path='juniorQ2'
         />
-        <ButtonsWrapper />
+
+        <Box sx={{ ...sx, display: 'flex', justifyContent: 'center' }}>
+          <ButtonsWrapper sx={{ position: 'absolute', bottom: '-20px' }} />
+        </Box>
       </Box>
 
       <Box>
-        <span>{data.name}</span>
-        <span>{data.category}</span>
-        <span>{data.price}</span>
+        <div>{data.name}</div>
+        <div>{data.category}</div>
+        <div>{data.price}</div>
       </Box>
     </>
   )

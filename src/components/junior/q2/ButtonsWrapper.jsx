@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import { Box } from "@mui/material";
 import Image from "@/components/Image";
 import { useTheme } from "@emotion/react";
+import ButtonIcon from '@/components/junior/q2/ButtonIcon';
 
 const propTypes = {
   sx: PropTypes.object,
@@ -22,6 +23,7 @@ function ButtonsWrapper({ sx, quantity }) {
       borderRadius: 100,
       p: 2,
       backgroundColor: theme.palette.junior.q2.brand.primary.main,
+      color: theme.palette.junior.q2.base.primary.main,
     }}>
       {
         quantity === 1
@@ -32,11 +34,11 @@ function ButtonsWrapper({ sx, quantity }) {
             </div>
           )
           : (
-            <div>
-              <Image sx={{ width: '20px' }} imageName='icon-decrement-quantity.svg' path='juniorQ2' />
-              <span className='quantity'>{quantity}</span>
-              <Image sx={{ width: '20px' }} imageName='icon-increment-quantity.svg' path='juniorQ2' />
-            </div>
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} >
+              <ButtonIcon imageName='icon-decrement-quantity.svg' />
+              <span>{quantity}</span>
+              <ButtonIcon imageName='icon-increment-quantity.svg' />
+            </Box>
           )
       }
     </Box >

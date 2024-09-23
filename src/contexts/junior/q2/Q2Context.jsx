@@ -30,7 +30,7 @@ function decrementQuantity() {
 
 // eslint-disable-next-line react/prop-types
 export function Q2Provider({ children }) {
-  const [selectedDesserts, setSelectedDesserts] = useState([]);
+  const [selectedDesserts, setSelectedDesserts] = useState({});
 
   const value = {
     desserts: [
@@ -147,11 +147,12 @@ export function Q2Provider({ children }) {
     /*
     Example of selectedDesserts
     {
-      id: 1,
-      name: "Waffle with Berries",
-      category: "Waffle",
-      price: 6.50,
-      quantity: 2
+      "1": {
+        name: "Waffle with Berries",
+        category: "Waffle",
+        price: 6.50,
+        quantity: 2
+      }
     }
     */
     addDessert,

@@ -7,7 +7,7 @@ const light = {
   },
   base: {
     primary: {
-      main: '#697C9A'
+      main: '#FFFFFF'
     },
     secondary: {
       main: '#4B6A9B'

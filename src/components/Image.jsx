@@ -35,9 +35,9 @@ function Image({ imageName, path, sx }) {
 
   return (
     <Box
+      sx={{ ...sx }}
       src={src}
       component='img'
-      sx={{ ...sx }}
     />
   )
 }

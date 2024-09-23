@@ -9,11 +9,11 @@ function Q2() {
       <Box sx={{ minHeight: '100vh' }}>
         <Container>
           <Grid2 container>
-            <Grid2 size={8}>
+            <Grid2 size={{ xs: 12, md: 9 }}>
               <Desserts />
             </Grid2>
 
-            <Grid2 size={4}>
+            <Grid2 size={{ xs: 12, md: 3 }}>
               <Cart />
             </Grid2>
           </Grid2>
