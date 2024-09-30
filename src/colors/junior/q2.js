@@ -1,34 +1,27 @@
 const light = {
   brand: {
     primary: {
-      main: '#C73B0F',
-      hover: '#952C0B'
-    }
+      main: '#C73B0F'
+    },
+    secondary: {
+      main: '#87635A'
+    },
   },
   base: {
     primary: {
       main: '#FFFFFF'
     },
     secondary: {
-      main: '#4B6A9B'
-    },
-    tertiary: {
-      main: '#2B3442'
-    },
-    quaternary: {
-      main: '#FFFFFF'
+      main: '#260F08'
     }
   },
   bg: {
     primary: {
-      main: '#FEFEFE',
+      main: '#FCF8F6',
     },
     secondary: {
-      main: '#F6F8FF',
+      main: '#FFFFFF',
     },
-  },
-  error: {
-    main: '#F74646'
   }
 }
 

@@ -2,6 +2,8 @@ import { Box } from "@mui/material";
 import PropTypes from 'prop-types'
 import Image from "@/components/Image";
 import ButtonsWrapper from "@/components/junior/q2/ButtonsWrapper";
+import Heading4 from "@/components/junior/q2/Heading4";
+import Heading3 from "@/components/junior/q2/Heading3";
 
 const propTypes = {
   data: PropTypes.object,
@@ -19,14 +21,17 @@ function Dessert({ data, sx }) {
         />
 
         <Box sx={{ ...sx, display: 'flex', justifyContent: 'center' }}>
-          <ButtonsWrapper sx={{ position: 'absolute', bottom: '-20px' }} />
+          <ButtonsWrapper
+            dessert={data}
+            sx={{ position: 'absolute', bottom: '-20px' }}
+          />
         </Box>
       </Box>
 
       <Box>
-        <div>{data.name}</div>
-        <div>{data.category}</div>
-        <div>{data.price}</div>
+        <Heading4>{data.name}</Heading4>
+        <Heading3>{data.category}</Heading3>
+        <Heading3>{data.price}</Heading3>
       </Box>
     </>
   )

@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useMemo, useState } from 'react';
 
 const Q2Context = createContext(undefined);
 
@@ -12,25 +12,72 @@ export function useQ2Context() {
   return context;
 }
 
-function addDessert() {
-  console.log('addDessert')
-}
-function removeDessert() {
-  console.log('removeDessert')
-}
-function resetSelectedDesserts() {
-  console.log('resetSelectedDesserts')
-}
-function incrementQuantity() {
-  console.log('incrementQuantity')
-}
-function decrementQuantity() {
-  console.log('decrementQuantity')
-}
-
 // eslint-disable-next-line react/prop-types
 export function Q2Provider({ children }) {
   const [selectedDesserts, setSelectedDesserts] = useState({});
+
+  function addDessert({ id, data }) {
+    if (selectedDesserts[id]) return
+
+    setSelectedDesserts(prev => ({
+      ...prev,
+      [id]: {
+        ...data,
+        quantity: 1
+      }
+    }))
+  }
+
+  function incrementQuantity(id) {
+    const selectedDessert = selectedDesserts[id]
+
+    if (!selectedDessert) return
+
+    setSelectedDesserts(prev => ({
+      ...prev,
+      [id]: {
+        ...selectedDessert,
+        quantity: selectedDessert.quantity + 1
+      }
+    }))
+  }
+
+  const selectedDessertsList = useMemo(() => {
+    const selectedDessertsArr = Object.entries(selectedDesserts)
+      .map(([id, dessert]) => ({ id, ...dessert }))
+
+    const totalPrice = selectedDessertsArr
+      .reduce((acc, { quantity, price }) => acc + (quantity * price), 0)
+
+    return { data: selectedDessertsArr, totalPrice, length: selectedDessertsArr.length }
+  }, [selectedDesserts])
+
+  const decrementQuantity = (id) => {
+    const selectedDessert = selectedDesserts[id]
+
+    if (!selectedDessert) return
+
+    if (selectedDessert.quantity <= 1) {
+      setSelectedDesserts(prev => {
+        const newPrev = { ...prev }
+        delete newPrev[id]
+
+        return newPrev
+      })
+    } else {
+      setSelectedDesserts(prev => ({
+        ...prev,
+        [id]: {
+          ...prev[id],
+          quantity: selectedDessert.quantity - 1
+        }
+      }))
+    }
+  }
+
+  const resetSelectedDesserts = () => {
+    setSelectedDesserts({})
+  }
 
   const value = {
     desserts: [
@@ -144,22 +191,12 @@ export function Q2Provider({ children }) {
       }
     ],
     selectedDesserts,
-    /*
-    Example of selectedDesserts
-    {
-      "1": {
-        name: "Waffle with Berries",
-        category: "Waffle",
-        price: 6.50,
-        quantity: 2
-      }
-    }
-    */
-    addDessert,
-    removeDessert,
     resetSelectedDesserts,
+    setSelectedDesserts,
+    addDessert,
     incrementQuantity,
-    decrementQuantity
+    decrementQuantity,
+    selectedDessertsList
   }
 
 

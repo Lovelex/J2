@@ -1,14 +1,15 @@
 import { Grid2 } from "@mui/material";
 import Dessert from "@/components/junior/q2/Dessert";
 import { useQ2Context } from "@/contexts/junior/q2/Q2Context";
+import Heading1 from "@/components/junior/q2/Heading1";
 
 function Desserts() {
   const { desserts } = useQ2Context()
-  console.log(desserts)
-
   return (
     <>
-      Desserts
+      <Heading1>
+        Desserts
+      </Heading1>
 
       <Grid2 container>
         {

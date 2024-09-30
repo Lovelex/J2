@@ -9,20 +9,24 @@ const propTypes = {
 }
 
 const images = {
-  juniorQ2: () => import.meta.glob('/src/assets/junior/q2/images/*.{jpg,png,jpeg,svg}')
+  juniorQ2: {
+    getImagesPath: () => import.meta.glob('/src/assets/junior/q2/images/*.{jpg,png,jpeg,svg}'),
+    getImagePath: (imageName) => `/src/assets/junior/q2/images/${imageName}`
+  }
 }
 
 async function getImgUrl(imageName, path) {
-  const imagePath = `/src/assets/junior/q2/images/${imageName}`;
+  const { getImagePath, getImagesPath } = images[path]
+  const imagesPath = getImagesPath()
+  const imagePath = getImagePath(imageName)
 
-  const imagesLoaded = images[path]()
-
-  if (imagesLoaded[imagePath]) {
-    const module = await imagesLoaded[imagePath]()
+  if (imagesPath[imagePath]) {
+    const module = await imagesPath[imagePath]()
     return module.default
   }
 
   console.error(`Imagem não encontrada: ${imageName}`);
+
   return null;
 }
 
